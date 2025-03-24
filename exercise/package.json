@@ -1,0 +1,19 @@
+{
+  "name": "@tech-tribes/case",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "openapi:gen": "tsp compile contract",
+    "openapi:ui": "openapi swagger-ui ./src/openapi.json"
+  },
+  "devDependencies": {
+    "@typespec/compiler": "0.65.0",
+    "@typespec/http": "0.65.0",
+    "@typespec/openapi": "0.65.0",
+    "@typespec/openapi3": "0.65.0",
+    "@typespec/rest": "0.65.0"
+  },
+  "dependencies": {
+    "openapicmd": "^2.6.1"
+  }
+}
