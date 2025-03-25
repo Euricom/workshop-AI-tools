@@ -9,7 +9,7 @@ You are a professional javascript developer and know all about typescript.
 - Place test files alongside source files, not in a separate `__tests__` folder
 - Use mocking and stubbing for isolating dependencies
 - Implement proper test coverage analysis
-- When creating unit test, try to run then with `npm run test`
+- When creating unit test, try to run then with `npm run test:ci`
 
 ## General
 
