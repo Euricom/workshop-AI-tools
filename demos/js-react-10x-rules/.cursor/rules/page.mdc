@@ -1,0 +1,61 @@
+# Page Structure Guidelines
+
+## Page Location and Organization
+- Create new pages in `src/pages` directory
+- Each page should have its own directory with the page name
+- Page component should be named `Page.tsx` (PascalCase)
+- Page-specific components should be placed in a directory
+
+## Page Structure
+```typescript
+// Good example
+import { PageHeader, PageHeaderHeading } from '@/components/page-header'
+import { Card, CardContent } from '@/components/ui/card'
+
+export default function PageName() {
+    return (
+        <>
+            <PageHeader>
+                <PageHeaderHeading>Page Title</PageHeaderHeading>
+            </PageHeader>
+            <Card>
+                <CardContent>
+                    {/* Page content */}
+                </CardContent>
+            </Card>
+        </>
+    )
+}
+
+// Bad example
+export default function PageName() {
+    return (
+        <>
+            {/* Page content */}
+        </>
+    )
+}
+```
+
+## Best Practices
+
+1. **Component Organization**
+   - Keep page components focused and modular
+   - Split complex pages into smaller components
+   - Place shared components in `src/components`
+
+2. **Styling**
+   - Use Tailwind CSS for styling
+   - Follow mobile-first responsive design
+   - Use Shadcn UI components when possible
+
+3. **State Management**
+   - Use React hooks for local state
+   - Use Context API for global state
+   - Use ReactQuery for data loading
+   - Keep state as close to where it's used as possible
+
+4. **Performance**
+   - Implement lazy loading for large components
+   - Use React.memo for expensive renders
+   - Optimize images and assets
