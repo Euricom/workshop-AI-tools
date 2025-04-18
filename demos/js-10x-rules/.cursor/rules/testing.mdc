@@ -1,0 +1,45 @@
+---
+description: Guidelines for testing the application with Vitest
+globs:
+alwaysApply: false
+---
+
+# Testing Guidelines
+
+## Testing Framework
+- `vitest` is used for testing
+- Tests are colocated next to the tested file
+  - Example: `dir/format.ts` and `dir/format.test.ts`
+
+## Common Mocks
+
+### Server-Only Mock
+
+```ts
+vi.mock("server-only", () => ({}));
+```
+
+### Prisma Mock
+```ts
+import { beforeEach, vi } from "vitest";
+
+vi.mock("@/src/server/db");
+
+describe("example", () => {
+  beforeEach(() => {
+    vi.clearAllMocks();
+  });
+
+  it("test", async () => {
+    vi.mocked(prisma.group.findMany).mockResolvedValue([]);
+  });
+});
+```
+
+## Best Practices
+- Each test should be independent
+- Use descriptive test names
+- Mock external dependencies
+- Clean up mocks between tests
+- Avoid testing implementation details
+
