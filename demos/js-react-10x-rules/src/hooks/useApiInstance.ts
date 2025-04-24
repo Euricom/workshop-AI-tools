@@ -1,12 +1,12 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { FetchOptions, ofetch } from "ofetch";
 import useAuth from "./useAuth";
+import { env } from "@/env";
 
 export const useApiInstance = () => {
-  const config = useConfig();
   const { getToken } = useAuth();
   const fetch = ofetch.create({
-    baseURL: config.API_BASE_URL,
+    baseURL: env.VITE_API_URL,
     async onRequest({ options }) {
       const token = await getToken();
       if (token) {

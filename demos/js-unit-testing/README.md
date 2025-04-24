@@ -12,22 +12,22 @@ While the AI can generate a function from a simple prompt, it often falls short 
 
 First give the AI the right to auto-run tools (use at your own risk)
 
-**Cursor**
+### Cursor
 
 ![](./images/cursor-auto-run.png)
 
-**RooCode**
+### RooCode
 
 ![](./images/rooCode-auto-approve.png)
 
-**GitHub Copilot**
+### GitHub Copilot
 
 Copilot doesn't have this option. There is a human intervention to confirm actions.
 
 
-## Imrove the prompt
+## Improve the prompt
 
-And now, the better prompt that improves your results.
+And now, the better prompt that improves your results. Let the AI write the tests first, then the code, and finally run the tests.
 
 ```prompt
 Create a function that converts a markdown string to an html string. Write the tests first, then the code, then run the tests and update the code until the tests pass.

@@ -21,8 +21,8 @@ export const mainMenu: MenuType = [
     icon: Files,
     items: [
       {
-        title: "Sample Page",
-        url: "/pages/sample",
+        title: "Product Page",
+        url: "/pages/products",
       },
       {
         title: "Coming Soon",
