@@ -1,0 +1,25 @@
+---
+description: Guidelines for testing the application with Vitest
+globs:
+alwaysApply: false
+---
+
+# Testing Guidelines
+
+## Testing Framework
+- `vitest` is used for testing
+- Tests are colocated next to the tested file
+  - Example: `dir/format.ts` and `dir/format.test.ts`
+
+## Best Practices
+- Each test should be independent
+- Use descriptive test names
+- Mock external dependencies
+- Clean up mocks between tests
+- Avoid testing implementation details
+- Use `import` for test, describe, and other testing functions
+- Name unit test files with the `spec` suffix
+- Place test files alongside source files, not in a separate `__tests__` folder
+- After creating a unit test, test them by running `npm run test:ci`
+- End the end don't give a summary of changes.
+

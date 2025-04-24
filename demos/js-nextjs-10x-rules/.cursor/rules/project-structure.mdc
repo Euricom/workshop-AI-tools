@@ -9,7 +9,7 @@ alwaysApply: false
 ## Main Structure
 
 - App is in root folder
-- Server actions are in `utils/actions` folder
+- Server actions are in `src/server/actions` folder
 
 ```tree
 .
@@ -49,19 +49,19 @@ alwaysApply: false
 
 ## File Naming and Organization
 
-- Use kebab case for route directories (e.g., `api/hello-world/route`)
-- Use PascalCase for components (e.g. `components/Button.tsx`)
-- Shadcn components are in `components/ui`
-- All other components are in `components/`
+- Use kebab case for route directories (e.g., `src/app/api/hello-world/route`)
+- Use PascalCase for components (e.g. `src/components/Button.tsx`)
+- Shadcn components are in `src/components/ui`
+- All other components are in `src/components/`
 - Colocate files in the folder where they're used unless they can be used across the app
-- If a component can be used in many places, place it in the `components` folder
+- If a component can be used in many places, place it in the `src/components` folder
 
 ## New Pages
 
-- Create new pages at: `app/(app)/PAGE_NAME/page.tsx`
-- Components for the page are either in `page.tsx` or in the `app/(app)/PAGE_NAME` folder
+- Create new pages at: `src/app/(app)/PAGE_NAME/page.tsx`
+- Components for the page are either in `page.tsx` or in the `src/app/(app)/PAGE_NAME` folder
 - Pages are Server components for direct data loading
-- Use `swr` for data fetching in deeply nested components
+- Use `trpc` for data fetching in deeply nested components
 - Components with `onClick` must be client components with `use client` directive
 - Server action files must start with `use server`
 
