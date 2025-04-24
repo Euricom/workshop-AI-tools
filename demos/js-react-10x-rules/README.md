@@ -31,3 +31,8 @@ react-shadcn-starter/
 └── vite.config.ts     # Vite configuration
 ```
 
+## Resources
+
+- https://github.com/elie222/inbox-zero
+- https://www.youtube.com/watch?v=sxqq9Eql6Cc
+

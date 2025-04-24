@@ -1,0 +1,37 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# JS React 10x - Master Rule Index
+
+This document serves as the central index for all active Cursor rules within this repository, organized by category. These rules define processes, structures, and guidelines for development.
+
+## Core & General
+
+Fundamental project structure, setup, and general development guidelines.
+
+| Rule File                  | Description                                        |
+| :------------------------- | :------------------------------------------------- |
+| @cursor-rules.mdc          | How to add or edit Cursor rules in our project     |
+| @project-structure.mdc     | Project structure and file organization guidelines |
+| @installing-packages.mdc   | How to install packages                            |
+| @environment-variables.mdc | Add environment variable                           |
+
+## Frontend & UI
+
+Guidelines for building user interfaces and handling frontend logic.
+
+| Rule File          | Description                                                   |
+| :----------------- | :------------------------------------------------------------ |
+| @page.mdc          | Page structure guidelines                                     |
+| @ui-components.mdc | UI component and styling guidelines (Shadcn, Radix, Tailwind) |
+| @forms.mdc         | React hook forms guidelines                                   |
+
+## Testing
+
+General guidelines for application testing.
+
+| Rule File    | Description                                        |
+| :----------- | :------------------------------------------------- |
+| @testing.mdc | Guidelines for testing the application with Vitest |
