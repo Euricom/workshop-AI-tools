@@ -8,17 +8,19 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { useQuery } from "@tanstack/react-query";
-import { getProducts } from "@/api/products";
+import { getProducts } from "@/api/products/products";
 import { Card } from "@/components/ui/card";
 import { Product } from "@/api/products/types";
 import { toast } from "sonner";
 import { useEffect } from "react";
+import { useApiInstance } from "@/hooks/useApiInstance";
 
 export default function Page() {
   // get product data
+  const api = useApiInstance();
   const { data: products = [], error } = useQuery<Product[]>({
     queryKey: ["products"],
-    queryFn: () => getProducts(),
+    queryFn: () => getProducts(api),
   });
 
   // handle fetch error

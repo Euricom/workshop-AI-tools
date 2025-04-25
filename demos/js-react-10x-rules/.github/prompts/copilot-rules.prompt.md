@@ -1,26 +1,27 @@
----
-description: Guidelines for creating and maintaining Cursor rules to ensure consistency and effectiveness.
-globs: .cursor/rules/*.mdc
-alwaysApply: true
----
+# Guidelines for creating and maintaining Github Copilot prompts to ensure consistency and effectiveness.
 
 - **Required Rule Structure:**
   ```markdown
-  ---
-  description: Clear, one-line description of what the rule enforces
-  globs: path/to/files/*.ext, other/path/**/*
-  alwaysApply: boolean
-  ---
+  # Clear, one-line description of what the rule enforces
 
   - **Main Points in Bold**
     - Sub-points with details
     - Examples and explanations
   ```
 
+- **File Name/Location**
+
+Always place rule files in PROJECT_ROOT/.github/prompts/:
+```
+.github/prompts/
+├── your-name.prompt.md
+├── another.prompt.md
+└── ...
+```
+
 - **File References:**
-  - Use `[filename](mdc:path/to/file)` ([filename](mdc:filename)) to reference files
-  - Example: [prisma.mdc](mdc:.cursor/rules/prisma.mdc) for rule references
-  - Example: [schema.prisma](mdc:prisma/schema.prisma) for code references
+  - Link dependencies via `#file` syntax relative to prompt location
+  - Example: `Error formats in #src/utils/errors.ts`
 
 - **Code Examples:**
   - Use language-specific code blocks
