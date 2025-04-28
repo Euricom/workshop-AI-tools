@@ -1,16 +1,6 @@
-using System.Text;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
-using MyApp.Application.Common.Configuration;
-using MyApp.Infrastructure;
-using MyApp.API.Middleware;
 
 var builder = WebApplication.CreateBuilder(args);
-
-// Add configuration
-var settings = builder.Configuration.GetSection("Application").Get<ApplicationSettings>()
-    ?? throw new InvalidOperationException("Application settings are not configured");
 
 // Add services to the container
 builder.Services.AddControllers();
@@ -53,28 +43,6 @@ builder.Services.AddSwaggerGen(c =>
     c.IncludeXmlComments(xmlPath);
 });
 
-// Configure JWT Authentication
-builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-    .AddJwtBearer(options =>
-    {
-        options.TokenValidationParameters = new TokenValidationParameters
-        {
-            ValidateIssuer = true,
-            ValidateAudience = true,
-            ValidateLifetime = true,
-            ValidateIssuerSigningKey = true,
-            ValidIssuer = settings.Jwt.Issuer,
-            ValidAudience = settings.Jwt.Audience,
-            IssuerSigningKey = new SymmetricSecurityKey(
-                Encoding.UTF8.GetBytes(settings.Jwt.Secret))
-        };
-    });
-
-// Add Infrastructure services
-builder.Services.AddInfrastructure(
-    settings,
-    builder.Configuration.GetConnectionString("DefaultConnection")
-        ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found."));
 
 var app = builder.Build();
 
@@ -86,9 +54,6 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
-// Use custom exception handling middleware
-app.UseCustomExceptionHandler();
 
 app.UseAuthentication();
 app.UseAuthorization();
