@@ -19,7 +19,6 @@ Organize the solution into clear layers under a `src/` directory, following the 
     - Contains technical implementations for interfaces (e.g., repository classes, EF Core DbContext, file or network services).
     - This outer layer depends on **Application** (and transitively on **Core**) to implement required interfaces.
     - **Nothing in Core/Application should depend on Infrastructure** (enforced by architecture rules).
-    - Sqlite in-memory database is used, but the actual database can be swapped out easily.
 
 - **MyApp.API – Presentation (Web API)**
     - The ASP.NET Core Web API project with controllers, endpoints, and possibly view models.

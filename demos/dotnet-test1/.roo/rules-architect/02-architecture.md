@@ -1,6 +1,6 @@
 # Architecture Rules (Layered Dependency Enforcement)
 
-Enforce the dependency direction and allowed interactions between layers, adhering to Onion Architecture principles. It ensures that inner layers are not corrupted by references to outer layers and that all coupling points follow the defined direction (toward the core).
+Enforce the dependency direction and allowed interactions between layers, adhering to Onion Architecture principles. It ensures that inner layers are not corrupted by references to outer layers and that all coupling points follow the defined direction (toward the core). Sqlite in-memory database is used, but the actual database can be swapped out easily.
 
 ## Dependency Direction
 

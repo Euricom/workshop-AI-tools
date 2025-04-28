@@ -1,6 +1,6 @@
 # Entity Framework & Data Access Rules (Infrastructure Layer)
 
-Govern the use of Entity Framework Core and the repository/unit-of-work patterns, ensuring they are properly confined to the Infrastructure layer. Prevent business or presentation logic from leaking into data access, and vice versa, enforcing a clean separation for persistence concerns.
+Govern the use of Entity Framework Core and the repository/unit-of-work patterns, ensuring they are properly confined to the Infrastructure layer. Prevent business or presentation logic from leaking into data access, and vice versa, enforcing a clean separation for persistence concerns. Sqlite in-memory database is used, but the actual database can be swapped out easily.
 
 ---
 
