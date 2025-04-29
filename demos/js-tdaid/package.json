@@ -11,8 +11,8 @@
     "ppr": "pnpm lint && pnpm test:ci && pnpm build",
     "test": "vitest",
     "test:ci": "vitest --run",
-    "lint": "eslint . --ext .ts",
-    "lint:fix": "eslint . --ext .ts --fix"
+    "lint": "eslint ./src --ext .ts",
+    "lint:fix": "eslint ./src --ext .ts --fix"
   },
   "dependencies": {},
   "devDependencies": {
