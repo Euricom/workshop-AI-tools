@@ -22,11 +22,9 @@ Fundamental project structure, setup, and general development guidelines.
 
 Guidelines for building user interfaces and handling frontend logic.
 
-| Rule File          | Description                                                   |
-| :----------------- | :------------------------------------------------------------ |
-| @page.mdc          | Page structure guidelines                                     |
-| @ui-components.mdc | UI component and styling guidelines (Shadcn, Radix, Tailwind) |
-| @forms.mdc         | React hook forms guidelines                                   |
+| Rule File | Description               |
+| :-------- | :------------------------ |
+| @page.mdc | Page structure guidelines |
 
 ## Testing
 

@@ -1,10 +1,4 @@
----
-description: Guidelines for testing the application with Vitest
-globs:
-alwaysApply: false
----
-
-# Testing Guidelines
+# Best practices for unit testing
 
 - Use Vitest as the unit testing framework.
 - Import testing functions (e.g., `test`, `describe`) explicitly instead of relying on the global Vitest API.
@@ -12,8 +6,5 @@ alwaysApply: false
 - Keep unit test files in the same directory as their corresponding source files, rather than in a separate `__tests__` directory.
 - Isolate dependencies by using mocking and stubbing where necessary. Prefer `vi.spyOn` over `vi.mock` for more targeted mocking.
 - DON'T run unit test with `pnpm test` or `npm run test`, it will required user input to continue. Use `pnpm run test:ci` instead for a single run. 
-- Each test should be independent
-- Use descriptive test names
-- Clean up mocks between tests when not done automatically
-- After creating a unit test, test them by running `pnpm test:ci`
-- Limit the summary of changes.
+  
+  

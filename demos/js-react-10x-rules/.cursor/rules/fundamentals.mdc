@@ -1,4 +1,8 @@
-# Fundamentals principles
+---
+description: Fundamentals principles
+globs: **/*
+alwaysApply: true
+---
 
 ## Fundamentals
 - Write clean simple, readable code
