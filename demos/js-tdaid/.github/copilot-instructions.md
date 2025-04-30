@@ -4,9 +4,9 @@ This document provides instructions for Copilot's behavior within this project.
 
 ## Available Guidelines
 
-1. [Fundamentals](./fundamentals.md)
-2. [Testing](./testing.md)
-3. [Code Style](./code-style.md)
+1. [Fundamentals](./guidelines/fundamentals.md)
+2. [Testing](./guidelines/testing.md)
+3. [Code Style](./guidelines/code-style.md)
 
 ## Usage
 
