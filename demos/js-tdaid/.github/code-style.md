@@ -3,6 +3,7 @@
 ## General Guidelines
 - Keep the code simple and readable.
 - Use Prettier for code formatting.
+- Use 2 spaces for indentation.
 
 ## TypeScript
 - Always use TypeScript for new code.
