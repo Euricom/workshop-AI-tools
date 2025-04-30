@@ -11,23 +11,14 @@
 
 - **File Name/Location**
 
-Always place rule files in PROJECT_ROOT/.roo/rules/:
+Always place rule files in PROJECT_ROOT/.roo/rules-code/:
 
 ```
-.roo/rules/
-├── rule-file.md
-├── another.md
+.roo/rules-code/
+├── 01_rule-file.md
+├── 02_another.md
 └── ...
 ```
-
-When specified that the rule is only for a specific mode add the mode postfix
-
-```
-.roo/rules-{mode}
-├── rule-file.md
-└── ...
-```
-
 
 - **Code Examples:**
   - Use language-specific code blocks

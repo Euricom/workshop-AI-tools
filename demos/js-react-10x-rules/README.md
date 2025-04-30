@@ -3,6 +3,22 @@
 This is a sample React project showcasing the application of advanced AI rules. 
 It demonstrates how custom rules can enhance daily workflows and boost productivity.
 
+## Creating rules based on the project
+
+First create a rule files based on existing code.
+
+```prompt
+create a rule file for an api wrapper, see example in products.ts
+```
+
+or 
+
+```prompt
+create a rule file for a page, see example in src/pages/products/
+```
+
+
+
 ## Rules files (per IDE)
 
 **Github Copilot**
@@ -22,7 +38,8 @@ It demonstrates how custom rules can enhance daily workflows and boost productiv
 
 ```bash
 # location of RooCode rules
-.roo/rules/
+.roo/rules/            # global rules
+.roo/rules-{mode}/     # mode-specific rules
 ```
 
 [RooCode Custom Instructions](https://docs.roocode.com/features/custom-instructions)

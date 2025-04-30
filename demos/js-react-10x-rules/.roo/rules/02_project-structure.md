@@ -8,7 +8,8 @@
 ├── public/            # Public assets
 ├── src/               # Application source code
 |   ├── api/           # API types and wrappers
-│   ├── components/    # React components
+│   ├── components/    # Other React components
+│   ├── components/ui  # Shadcn components
 │   ├── context/       # contexts components
 │   ├── config/        # Config data
 │   ├── hook/          # Custom hooks
@@ -33,17 +34,21 @@
 
 ## New Pages
 
-- Create new pages at: `src/pages`
-- Place a new page in `src/pages/PAGE_NAME/Page.tsx` folder
-- Place specific component for that page inside the page folder 
+- Add new pages in the `src/pages` directory.
+- Organize each page in its own folder: `src/pages/PAGE_NAME/`.
+- Place the main page component inside the folder as `Page.tsx`.
+- Include any page-specific components within the same folder for better organization.
 
 ## Utility Functions
 
-- Create utility functions in `lib/` folder for reusable logic
-- Use lodash utilities for common operations (arrays, objects, strings)
-- Import specific lodash functions to minimize bundle size:
+- Place reusable utility functions in the `src/lib/` directory to maintain a clean and organized structure.
+- Leverage `lodash` for common operations involving arrays, objects, and strings to simplify code and improve readability.
+- Import only the specific `lodash` functions you need to reduce the bundle size. For example:
 
 ```ts
 import groupBy from "lodash/groupBy";
 ```
+- Write utility functions with clear and concise documentation to ensure ease of use and maintainability.
+- Avoid duplicating logic by centralizing shared functionality in the `lib/` folder.
+- Test all utility functions thoroughly to ensure reliability across the application.
 

@@ -13,7 +13,7 @@
     // customize commit messages
     "github.copilot.chat.commitMessageGeneration.instructions": [
         {
-            "file": ".github/commit-message.md"
+            "file": ".github/commit-style.md"
         }
     ],
     

@@ -17,7 +17,7 @@ Use these types:
 - `style: format code with Prettier`
 - `refactor: improve performance of data processing`
 - `test: add unit tests for user service`
-- `chore: update dependencies`
+- `chore: update dependencies, scripts and build stuff`
 
 Additionally, a scope is added to the commit message in parentheses to specify the area of the codebase that is affected. The scope should be a short, lowercase identifier that describes the part of the codebase being modified. For example, if you are making changes to the authentication module, you might use `auth` as the scope.
 An example would be:
@@ -26,4 +26,3 @@ An example would be:
 
 The commit message should also include a detailed description of the changes made in the commit after the summary line if necessary.
 Always use a bullet list to describe the changes made in the commit. This makes it easier to read and understand the changes at a glance.
-
