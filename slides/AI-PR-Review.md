@@ -2,8 +2,62 @@
 
 These are the major AI tools for PR review:
 
+- Ask for a Code review
 - GitHub Copilot PR Review
-- CodeRabbit
+- CodeRabbit PR Review
+
+## Ask for a Code Review
+
+Ask for a code review based on the local changes.
+
+**Copilot**
+
+Git Changes x
+
+```prompt
+Review the code for best practices and give suggestions to improve 
+```
+
+**RooCode**
+
+```prompt
+@git-changes 
+Review the code for best practices and give suggestions to improve 
+```
+
+**Cursor**
+
+```prompt
+@Commit (Diff of Working State) @code-review.mdc 
+Review the code for best practices and give suggestions to improve 
+```
+
+If you need a more detailed review, you can use the following prompt:
+
+```prompt
+Please conduct a comprehensive code review of the recent changes. Focus on the following aspects:
+
+1.  **Best Practices:**
+    *   Adherence to established coding style guides.
+    *   Readability and clarity of the code.
+    *   Efficient use of data structures and algorithms.
+    *   Appropriate use of comments and documentation.
+    *   Maintainability and extensibility.
+2.  **Security Issues:**
+    *   Potential vulnerabilities (e.g., injection flaws, cross-site scripting, insecure deserialization).
+    *   Proper input validation and sanitization.
+    *   Secure handling of sensitive data.
+    *   Prevention of common security misconfigurations.
+    *   Adherence to secure coding principles.
+3.  **Performance:**
+    *   Identification of potential performance bottlenecks.
+    *   Efficiency of loops and iterative processes.
+    *   Optimization of database queries or external API calls.
+    *   Minimizing unnecessary computations or resource usage.
+    *   Consideration of scalability implications.
+
+Provide specific examples and suggestions to improvement.
+```
 
 ## Copilot PR Review
 
